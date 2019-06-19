@@ -592,9 +592,9 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@dcloudio/uni-app-plus@*":
-  version "0.0.243"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-app-plus/-/uni-app-plus-0.0.243.tgz#0c2258e237a1a37f69268301f3051f752024afb0"
+"@dcloudio/uni-app-plus@0.0.244":
+  version "0.0.244"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-app-plus/-/uni-app-plus-0.0.244.tgz#2d6b5ff23e7732c0ad9629a8fdf87df22223445b"
 
 "@dcloudio/uni-cli-shared@*":
   version "0.2.963"
@@ -607,25 +607,25 @@
   version "0.5.10"
   resolved "https://registry.yarnpkg.com/@dcloudio/uni-h5/-/uni-h5-0.5.10.tgz#1edb590cf2754ae2e8e6142a15d5abded9fc3da6"
 
-"@dcloudio/uni-mp-alipay@*":
-  version "0.0.817"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-alipay/-/uni-mp-alipay-0.0.817.tgz#be9cfcdbc6080d05540900c6902e5e4fd573a379"
+"@dcloudio/uni-mp-alipay@0.0.818":
+  version "0.0.818"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-alipay/-/uni-mp-alipay-0.0.818.tgz#d28a33a1a4647df6d0a3242c8546915b85dd44df"
 
-"@dcloudio/uni-mp-baidu@*":
-  version "0.0.845"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-baidu/-/uni-mp-baidu-0.0.845.tgz#fc81f0b66baade54c68a27704d796b48ea4b6efd"
+"@dcloudio/uni-mp-baidu@0.0.846":
+  version "0.0.846"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-baidu/-/uni-mp-baidu-0.0.846.tgz#8cee9b157dea44c6539d426ffca78ad23ac4c060"
 
-"@dcloudio/uni-mp-qq@*":
-  version "0.0.101"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-qq/-/uni-mp-qq-0.0.101.tgz#a143e0d9e15d8880bb9b5334bb4dcacaec322aa1"
+"@dcloudio/uni-mp-qq@0.0.102":
+  version "0.0.102"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-qq/-/uni-mp-qq-0.0.102.tgz#2992c72e9aa78455c5f9b9bbc37fbcdc57e2aee2"
 
-"@dcloudio/uni-mp-toutiao@*":
-  version "0.0.341"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-toutiao/-/uni-mp-toutiao-0.0.341.tgz#c44c9d7b4d0f36aa132e42860086a9c7b943096e"
+"@dcloudio/uni-mp-toutiao@0.0.342":
+  version "0.0.342"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-toutiao/-/uni-mp-toutiao-0.0.342.tgz#3f125158746dcbbe916edf5842e50c065d14e9e0"
 
-"@dcloudio/uni-mp-weixin@*":
-  version "0.0.962"
-  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-0.0.962.tgz#b2edd8b3a28f6e34eb0cd394114aa2835d79562b"
+"@dcloudio/uni-mp-weixin@0.0.963":
+  version "0.0.963"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-0.0.963.tgz#2f76f056936a3ac044460897aaf5a02445187b5a"
 
 "@dcloudio/uni-template-compiler@*":
   version "0.9.179"
@@ -644,8 +644,8 @@
     escodegen "^1.8.1"
 
 "@dcloudio/vue-cli-plugin-uni@latest":
-  version "0.9.481"
-  resolved "https://registry.yarnpkg.com/@dcloudio/vue-cli-plugin-uni/-/vue-cli-plugin-uni-0.9.481.tgz#41ae2defb3b8798337c9150ee82fdf8e62fdb1c9"
+  version "0.9.482"
+  resolved "https://registry.yarnpkg.com/@dcloudio/vue-cli-plugin-uni/-/vue-cli-plugin-uni-0.9.482.tgz#820a3b0a127d7ee66fccc61761dae8525300fdbc"
   dependencies:
     copy-webpack-plugin "^4.6.0"
     cross-env "^5.2.0"
@@ -1344,8 +1344,8 @@ babel-loader@^8.0.5:
     pify "^4.0.1"
 
 babel-plugin-dynamic-import-node@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.2.0.tgz#c0adfb07d95f4a4495e9aaac6ec386c4d7c2524e"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.0.tgz#f00f507bdaa3c3e3ff6e7e5e98d90a7acab96f7f"
   dependencies:
     object.assign "^4.1.0"
 
@@ -1541,11 +1541,11 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.0.0, browserslist@^4.3.4, browserslist@^4.5.4, browserslist@^4.6.1:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.2.tgz#574c665950915c2ac73a4594b8537a9eba26203f"
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.6.3.tgz#0530cbc6ab0c1f3fc8c819c72377ba55cf647f05"
   dependencies:
-    caniuse-lite "^1.0.30000974"
-    electron-to-chromium "^1.3.150"
+    caniuse-lite "^1.0.30000975"
+    electron-to-chromium "^1.3.164"
     node-releases "^1.1.23"
 
 buffer-from@^1.0.0:
@@ -1696,9 +1696,9 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000971, caniuse-lite@^1.0.30000974:
-  version "1.0.30000974"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000974.tgz#b7afe14ee004e97ce6dc73e3f878290a12928ad8"
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000971, caniuse-lite@^1.0.30000975:
+  version "1.0.30000975"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000975.tgz#d4e7131391dddcf2838999d3ce75065f65f1cdfc"
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
@@ -2566,9 +2566,9 @@ ejs@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.2.tgz#3a32c63d1cd16d11266cd4703b14fec4e74ab4f6"
 
-electron-to-chromium@^1.3.150:
-  version "1.3.164"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.164.tgz#8680b875577882c1572c42218d53fa9ba5f71d5d"
+electron-to-chromium@^1.3.164:
+  version "1.3.165"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.165.tgz#51864c9e3c9bd9e1c020b9493fddcc0f49888e3a"
 
 elliptic@^6.0.0:
   version "6.4.1"

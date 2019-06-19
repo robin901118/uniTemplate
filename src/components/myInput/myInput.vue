@@ -1,17 +1,36 @@
 <template>
-	<label>
-		<input type="text" :name="inputName">
+	<label class="label">
+		<view class="titleBox flex mainJustify crossCenter">
+			<text class="labelName">{{labelName}}</text>
+			<slot name="boxRightContent"></slot>
+		</view>
+		<view class="inputBox flex crossCenter">
+			<slot name="boxLeftContent"></slot>
+			<input type="text" :name="bindName" v-model="value">
+		</view>
 	</label>
 </template>
 
 <script>
 	export default {
-		behaviors:['wx://form-field'],
+		behaviors: ['uni://form-field'],
 		props:{
-			inputName:{
+			labelName:{
+				type:String,
+				default:"labelName"
+			},
+			isPassword:{
+				type:Boolean,
+				default:false
+			},
+			bindName:{//支付宝小程序必须
 				type:String,
 				required:true
 			}
 		}
 	}
 </script>
+
+<style lang="scss">
+	@import "./myInput"
+</style>

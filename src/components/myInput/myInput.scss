@@ -1,0 +1,39 @@
+.label{
+	display: block;
+}
+.labelName{
+	font-size: 30upx;
+	color:black;
+}
+.inputBox{
+	border-bottom: 1upx solid black;
+	height: 80upx;
+	position: relative;
+	padding: 0 10upx;
+	box-sizing: border-box;
+	&::before{
+		content:"";
+		display: block;
+		position: absolute;
+		left: -1upx;
+		bottom: -1upx;
+		height: 50%;
+		width: 1upx;
+		border-left: 1upx solid black;
+	}
+	&::after{
+		content:"";
+		display: block;
+		position: absolute;
+		right: -1upx;
+		bottom: -1upx;
+		height: 50%;
+		width: 1upx;
+		border-right: 1upx solid black;
+	}
+	input{
+		height: 80%;
+		flex:1;
+		padding: 0;
+	}
+}

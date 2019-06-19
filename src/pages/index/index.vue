@@ -7,25 +7,19 @@
 		</view>
 
 		<form class="form" @submit="loginSubmit">
-			<label class="label">
-				<view class="titleBox">
-					<text class="labelName">电话</text>
-				</view>
-				<view class="inputBox flex crossCenter">
-					<text slot="boxLeftContent" class="telCode">+86</text>
-					<input type="text" name="tel">
-				</view>
-			</label>
+			<myInput name="tel" bindName="tel" labelName="电话">
+				<text slot="boxLeftContent" class="telCode">+86</text>
+			</myInput>
 			<view class="nullFloor"></view>
-			<label class="label">
-				<view class="flex mainJustify crossCenter titleBox">
-					<text class="labelName">密码</text>
-					<button slot="boxRightContent" class="togglePsw" size="mini" @click="togglePsw">{{showPsw ? "隐藏" : "显示"}}</button>
-				</view>
-				<view class="inputBox flex crossCenter">
-					<input type="text" name="password" :password="showPsw">
-				</view>
-			</label>
+			<myInput name="password" bindName="password" labelName="密码" :isPassword="showPsw">
+				<button
+				slot="boxRightContent"
+				class="togglePsw"
+				size="mini"
+				@click="togglePsw">
+				{{showPsw ? "隐藏" : "显示"}}
+				</button>
+			</myInput>
 			<view class="nullFloor"></view>
 			<view class="flex mainRight">
 				<button class="forgetBtn" size="mini">忘记密码？</button>
@@ -36,7 +30,7 @@
 </template>
 
 <script>
-	// import myInput from "../../components/myInput/myInput";
+	import myInput from "../../components/myInput/myInput";
 
 	export default {
 		data() {
@@ -44,6 +38,7 @@
 				showPsw: false,
 			}
 		},
+		components:{myInput},
 		methods: {
 			/**
 			 * 密码显示隐藏
@@ -57,6 +52,7 @@
 			 * **/
 			loginSubmit(e) {
 				const val = e.detail.value;
+				console.log(val);
 				if (val.tel && val.password) {
 					// 登录成功，跳转api列表页面
 					uni.navigateTo({
