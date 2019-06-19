@@ -1,0 +1,98 @@
+.head{
+	position: relative;
+	height: 262upx;
+	width: 100%;
+	margin-bottom: 10vw;
+}
+.bgImg{
+  height: 100%;
+	width: 100%;
+}
+.logo{
+	width: 20vw;
+	height: 20vw;
+	position: absolute;
+	left: 50%;
+	top:70%;
+	transform: translate(-50%,-50%);
+}
+.registerBtn{
+	background: black;
+	position: absolute;
+	right: 40upx;
+	top:40upx;
+	color:#ffda2a;
+	border: none;
+}
+.main{
+	box-sizing: border-box;
+	padding: 0 10vw;
+}
+.form{
+	display: block;
+	box-sizing: border-box;
+	padding: 33upx 35upx;
+}
+.telCode{
+	font-size: 30upx;
+	color: white;
+	display: inline-block;
+	line-height: normal;
+	padding: 10upx 20upx;
+	background: #898989;
+	margin-right: 20upx;
+}
+.nullFloor{
+	height: 30upx;
+}
+.togglePsw,.forgetBtn{
+	background: #898989;
+	color: white;
+	margin: 0;
+}
+.loginBtn{
+	height: 90upx;
+	background: #ffda2a;
+	margin-top: 40upx;
+}
+
+/* 表单样式 */
+.label{
+	display: block;
+}
+.labelName{
+	font-size: 30upx;
+	color:black;
+}
+.inputBox{
+	border-bottom: 1upx solid black;
+	height: 80upx;
+	position: relative;
+	padding: 0 10upx;
+	box-sizing: border-box;
+	&::before{
+		content:"";
+		display: block;
+		position: absolute;
+		left: -1upx;
+		bottom: -1upx;
+		height: 50%;
+		width: 1upx;
+		border-left: 1upx solid black;
+	}
+	&::after{
+		content:"";
+		display: block;
+		position: absolute;
+		right: -1upx;
+		bottom: -1upx;
+		height: 50%;
+		width: 1upx;
+		border-right: 1upx solid black;
+	}
+	input{
+		height: 80%;
+		flex:1;
+		padding: 0;
+	}
+}
