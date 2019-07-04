@@ -8,6 +8,22 @@ export default class Http {
 	constructor(arg) {
 		this.baseUrl = store.state.baseUrl
 	}
+	
+	//错误码集合
+	statusCodes = {
+        400: '错误请求',
+        403: '拒绝访问',
+        404: '啊哦,接口404...',
+        405: '请求方法未允许',
+        408: '请求超时',
+        500: '服务器端出错',
+        501: '网络未实现',
+        502: '网络错误',
+        503: '服务不可用',
+        504: '网络超时',
+        505: 'http版本不支持该请求'
+	}
+	
 
 	/**
 	 * 错误弹窗
@@ -16,19 +32,13 @@ export default class Http {
 	 * **/
 	errorPop(error, confirmCallBack) {
 		let obj = {
-			title: '温馨提示',
+			title: '接口提示',
 			content: error,
 			showCancel: false,
-			confirmText: '我知道了'
+			confirmText: '确认'
 		};
-		obj.success = (res) => {
-			if (res.confirm && confirmCallBack) {
-				confirmCallBack(); //回调
-			}
-		};
-		obj.fail = () => {
-			console.log("modalFail");
-		};
+		obj.success = (res) => res.confirm && confirmCallBack && confirmCallBack(); //回调;
+		obj.fail = () => console.log("modalFail");
 		uni.showModal(obj);
 	}
 
@@ -68,37 +78,46 @@ export default class Http {
 				method: method,
 				header: headerConfig,
 				success: res => {
-					//请求成功
+					let errorMsg = "";
+					
+					//接口错误拦截(非200错误码拦截)
+					self.statusCodes.hasOwnProperty(res['statusCode'])
+					&& (errorMsg = self.statusCodes[res['statusCode']]);
+					
 					let result = res['data'];
-
-					if (!result.hasOwnProperty('_code')) {
-						self.errorPop('后台维护中,请稍后再试');
+					if (errorMsg || !result.hasOwnProperty('_code')) {
+						self.errorPop(errorMsg || '无法获取到_code');
 						reject(false);
 						return;
 					}
-					if (result['_code'] === '99999') {
-						result.hasOwnProperty('_result') ? resolve(result['_result']) : resolve(true);
-					} else if (result['_code'] === '20001') {
-						//未登录状态
-						self.errorPop(result['_msg'], function() {
-							// wepy.$instance.publicLoginOut();//登出操作
-							console.log('登出');
-						});
-						reject(false);
-					} else {
-						self.errorPop(result['_msg']);
-						reject(false);
+					
+					switch(result['_code']){
+						
+						//请求成功
+						case '99999':
+							result.hasOwnProperty('_result') ? resolve(result['_result']) : resolve(true);
+							break;
+						
+						//未登录
+						case'20001':
+							self.errorPop(result['_msg'], function() {
+								console.log('登出');
+							});
+							reject(false);
+							break;
+						
+						default:
+							self.errorPop(result['_msg']);
+							reject(false);
 					}
 				},
 				fail: rej => {
 					//请求失败
+					console.log(`接口请求失败:${rej}`);
 					console.log(rej['errMsg']);
 					reject(false);
 				},
-				complete: () => {
-					//关闭loading
-					loading && uni.hideNavigationBarLoading();
-				}
+				complete: () => loading && uni.hideNavigationBarLoading() //关闭loading
 			})
 		})
 	}

@@ -7,9 +7,9 @@
 			}
 		},
 		{
-			"path":"pages/apiList/apiList",
-			"style":{
-				"navigationBarTitleText":"api列表"
+			"path": "pages/apiList/apiList",
+			"style": {
+				"navigationBarTitleText": "api列表"
 			}
 		}
 	],
