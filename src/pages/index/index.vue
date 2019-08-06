@@ -22,17 +22,17 @@
 			</view>
 			<!-- 已授权 -->
 			<template v-if="isAuthed">
-				<!-- #ifdef MP-WEIXIN -->
 				<button
 				formType="submit"
-				class="loginBtn">微信登录</button>
+				class="loginBtn">
+				<!-- #ifdef MP-WEIXIN -->
+				微信登录
 				<!-- #endif -->
 				
 				<!-- #ifdef MP-ALIPAY -->
-				<button
-				formType="submit"
-				class="loginBtn">支付宝登录</button>
+				支付宝登录
 				<!-- #endif -->
+				</button>
 			</template>
 			
 			<!-- 未授权 -->
@@ -50,6 +50,12 @@
 				@click="getUserInfo">支付宝授权</button>
 				<!-- #endif -->
 			</template>
+			
+			<!-- #ifdef H5 -->
+			<button
+			class="loginBtn"
+			formType="submit">登录</button>
+			<!-- #endif -->
 		</form>
 	</view>
 </template>
@@ -62,6 +68,7 @@
 			return {
 				showPsw: false,
 				isAuthed:false,//是否授权过
+				imgCode:""
 			}
 		},
 		components: {
@@ -80,11 +87,11 @@
 			 * **/
 			loginSubmit(e) {
 				const val = e.detail.value;
+				
+				console.log(val);
 				if (val.tel && val.password) {
 					// 登录成功，跳转api列表页面
-					uni.navigateTo({
-						url: '/pages/apiList/apiList'
-					});
+					this.$Router.push('/pages/apiList/apiList');
 				} else {
 					uni.showToast({
 						title: '电话和密码不能为空',
@@ -132,7 +139,8 @@
 				  },
 				});
 				// #endif
-			}
+			},
+		
 		},
 		mounted() {
 			// 微信获取授权列表
@@ -156,7 +164,6 @@
 				}
 			})
 			// #endif
-
 		}
 	}
 </script>

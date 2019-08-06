@@ -6549,6 +6549,11 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
+uni-simple-router@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/uni-simple-router/-/uni-simple-router-1.1.0.tgz#ca4760abd30ae1b0725cd3e5bb1904fe625999dc"
+  integrity sha512-PuNLN/PBt3JCuwA+KoKSb5wJk8X9Caxfdhi7vJcdRM3pl9x5d4p2L5VXS8caEKAoyHwyJ91AHv11VW7tKPkZ9A==
+
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"

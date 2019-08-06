@@ -6,7 +6,13 @@
 		</view>
 		<view class="inputBox flex crossCenter">
 			<slot name="boxLeftContent"></slot>
+			<!-- #ifndef H5 -->
 			<input type="text" :name="bindName" v-model="value">
+			<!-- #endif -->
+			
+			<!-- #ifdef H5 -->
+			<input type="text" :name="bindName">
+			<!-- #endif -->
 		</view>
 	</label>
 </template>
